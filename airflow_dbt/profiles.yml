@@ -1,0 +1,10 @@
+# airflow_dbt/profiles.yml
+
+airflow_dbt: # 프로젝트 이름 (dbt_project.yml의 profile 항목과 같아야 함)
+  outputs:
+    dev:
+      type: duckdb
+      # ★ 중요: Airflow 컨테이너가 바라보는 DuckDB 파일의 절대 경로입니다.
+      path: /mnt/c/workspaces/duckdb:/opt/airflow/duckdb/dbt-pipeline.duckdb
+      threads: 1
+  target: dev

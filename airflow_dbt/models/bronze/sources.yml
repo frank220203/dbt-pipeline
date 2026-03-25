@@ -1,0 +1,5 @@
+version: 2
+sources:
+  - name: bronze
+    tables:
+      - name: portfolio # 현재 DuckDB에 들어있는 테이블 이름
